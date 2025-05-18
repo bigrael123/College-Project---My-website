@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Script para suporte multilíngue -->
+    <script defer src="multilang.js"></script>
+</head>
+<body>
+    <header>
+        <h1 data-pt="Sobre mim" data-en="About Me">Sobre mim</h1>
+        <div class="language-switch">
+            <button id="pt-btn" class="active">PT</button>
+            <button id="en-btn">EN</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" data-pt="Sobre mim" data-en="About Me">Sobre mim</a>
+        <a href="formacao.html" data-pt="Formação" data-en="Education">Formação</a>
+        <a href="portfolio.html" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
+        <a href="contato.html" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="container">
+        <h2 data-pt="Olá! Eu sou Israel Beteguella" data-en="Hello! I'm Israel Beteguella">Olá! Eu sou Israel Beteguella</h2>
+        <p data-pt="Sou estudante de Engenharia de Software e desenvolvedor de jogos apaixonado por tecnologia  e desenvolvimento. Meus hobbies incluem, escrita criativa, jogos e filmes." data-en="I'm a Software Engineering student and a Game Developer passionate about technology and development. My hobbies include, creative writing, games, and movies.">
+            Sou estudante de Engenharia de Software e desenvolvedor de jogos apaixonado por tecnologia  e desenvolvimento. Meus hobbies incluem, escrita criativa, jogos e filmes.
+        </p>
+        <p data-pt="Neste site você encontrará informações sobre minha formação, projetos e como entrar em contato comigo." data-en="On this website you will find information about my education, projects, and how to contact me.">
+            Neste site você encontrará informações sobre minha formação, projetos e como entrar em contato comigo.
+        </p>
+    </div>
+    <script>
+    // Garante que o botão ativo reflete o idioma salvo ao navegar entre páginas
+    document.addEventListener('DOMContentLoaded', function() {
+        var lang = (function() {
+            var nameEQ = 'siteLang=';
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        })();
+        if(lang === 'en') {
+            document.getElementById('pt-btn').classList.remove('active');
+            document.getElementById('en-btn').classList.add('active');
+        } else {
+            document.getElementById('pt-btn').classList.add('active');
+            document.getElementById('en-btn').classList.remove('active');
+        }
+    });
+    </script>
+</body>
+</html>

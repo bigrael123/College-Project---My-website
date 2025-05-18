@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="multilang.js"></script>
+</head>
+<body>
+    <header>
+        <h1 data-pt="Contato" data-en="Contact">Contato</h1>
+        <div class="language-switch">
+            <button id="pt-btn" class="active">PT</button>
+            <button id="en-btn">EN</button>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html" data-pt="Sobre mim" data-en="About Me">Sobre mim</a>
+        <a href="formacao.html" data-pt="Formação" data-en="Education">Formação</a>
+        <a href="portfolio.html" data-pt="Portfólio" data-en="Portfolio">Portfólio</a>
+        <a href="contato.html" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="container">
+        <h2 data-pt="Entre em contato" data-en="Get in touch">Entre em contato</h2>
+        <form>
+            <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" data-pt="Seu nome" data-en="Your name">
+
+            <label for="email" data-pt="Email" data-en="Email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" data-pt="seu@email.com" data-en="your@email.com">
+
+            <label for="mensagem" data-pt="Mensagem" data-en="Message">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" data-pt="Digite sua mensagem" data-en="Type your message"></textarea>
+
+            <button type="submit" data-pt="Enviar" data-en="Send">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

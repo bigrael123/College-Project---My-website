@@ -1,0 +1,120 @@
+/* style.css - Estilos principais do site portfólio pessoal
+   Comentários explicam as principais seções do CSS */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+}
+
+header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: #1a2533;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffb347;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.language-switch button {
+    background: #fff;
+    color: #2d3e50;
+    border: 1px solid #2d3e50;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.language-switch button.active {
+    background: #2d3e50;
+    color: #fff;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+    background: #2d3e50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #ffb347;
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .language-switch {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
